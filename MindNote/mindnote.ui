@@ -1,29 +1,795 @@
-<UI version="4.0" >
- <class>MindNoteClass</class>
- <widget class="QMainWindow" name="MindNoteClass" >
-  <property name="objectName" >
-   <string notr="true">MindNoteClass</string>
-  </property>
-  <property name="geometry" >
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
-	<x>0</x>
-	<y>0</y>
-	<width>600</width>
-	<height>400</height>
+    <x>0</x>
+    <y>0</y>
+    <width>1074</width>
+    <height>594</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>MindNote</string>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+    <kerning>false</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="animated">
+   <bool>false</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>4</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>10</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGraphicsView" name="graphicsView"/>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>13</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>218</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>218</width>
+            <height>511</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>基本设置</string>
+           </attribute>
+           <widget class="QGroupBox" name="Node">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>80</y>
+              <width>211</width>
+              <height>161</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>颜色</string>
+            </property>
+            <widget class="QGroupBox" name="g_back">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>161</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>背景</string>
+             </property>
+             <widget class="QRadioButton" name="bt_back_5">
+              <property name="geometry">
+               <rect>
+                <x>130</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_back_1">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="acceptDrops">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_back_4">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_back_2">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_back_3">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>70</y>
+               <width>161</width>
+               <height>81</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>边框线</string>
+             </property>
+             <widget class="QRadioButton" name="bt_line_5">
+              <property name="geometry">
+               <rect>
+                <x>130</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_line_1">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="acceptDrops">
+               <bool>false</bool>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_line_3">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_line_2">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_line_4">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="BackDegree">
+              <property name="geometry">
+               <rect>
+                <x>90</x>
+                <y>50</y>
+                <width>48</width>
+                <height>24</height>
+               </rect>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>6</number>
+              </property>
+             </widget>
+             <widget class="QLabel" name="FrameDegree_Label">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>50</y>
+                <width>60</width>
+                <height>16</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>边框粗细</string>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="Line">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>260</y>
+              <width>211</width>
+              <height>121</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>连线</string>
+            </property>
+            <widget class="QGroupBox" name="LineShape">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>20</y>
+               <width>161</width>
+               <height>51</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>线型</string>
+             </property>
+             <widget class="QRadioButton" name="bt_LineShape_5">
+              <property name="geometry">
+               <rect>
+                <x>130</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_LineShape_1">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_LineShape_3">
+              <property name="geometry">
+               <rect>
+                <x>70</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_LineShape_2">
+              <property name="geometry">
+               <rect>
+                <x>40</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QRadioButton" name="bt_LineShape_4">
+              <property name="geometry">
+               <rect>
+                <x>100</x>
+                <y>20</y>
+                <width>21</width>
+                <height>20</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QLabel" name="LineDegree">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>80</y>
+               <width>60</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>连线粗细</string>
+             </property>
+            </widget>
+            <widget class="QSpinBox" name="LineDegree_2">
+             <property name="geometry">
+              <rect>
+               <x>100</x>
+               <y>80</y>
+               <width>48</width>
+               <height>24</height>
+              </rect>
+             </property>
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>3</number>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="Font">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>390</y>
+              <width>211</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>字体</string>
+            </property>
+            <widget class="QFontComboBox" name="fontComboBox">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>20</y>
+               <width>201</width>
+               <height>28</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="NodeShape_6">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>211</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>主题</string>
+            </property>
+            <widget class="QRadioButton" name="bt_theme_5">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>20</y>
+               <width>21</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;gay紫&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="bt_theme_1">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>20</y>
+               <width>21</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="acceptDrops">
+              <bool>false</bool>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;萤森&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="bt_theme_3">
+             <property name="geometry">
+              <rect>
+               <x>80</x>
+               <y>20</y>
+               <width>21</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;水蓝&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="bt_theme_2">
+             <property name="geometry">
+              <rect>
+               <x>50</x>
+               <y>20</y>
+               <width>21</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;赤焰&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="bt_theme_4">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>20</y>
+               <width>21</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;暗金&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>注释</string>
+           </attribute>
+           <widget class="QGroupBox" name="annotation">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>10</y>
+              <width>211</width>
+              <height>191</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>注释</string>
+            </property>
+            <widget class="QTextEdit" name="annotationText">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>191</width>
+               <height>151</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>230</y>
+              <width>191</width>
+              <height>211</height>
+             </rect>
+            </property>
+            <column>
+             <property name="text">
+              <string>MindNote</string>
+             </property>
+            </column>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>10</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1074</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_3">
+    <property name="font">
+     <font>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="title">
+     <string>MindNote</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNewChildNode"/>
+    <addaction name="actionDeleteNode"/>
+    <addaction name="separator"/>
+    <addaction name="actionSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionHelp"/>
+    <addaction name="actionAbout"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCut">
+   <property name="text">
+    <string>剪切</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>拷贝</string>
+   </property>
+   <property name="toolTip">
+    <string>拷贝</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="text">
+    <string>粘贴</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionNewChildNode">
+   <property name="text">
+    <string>新建子节点</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Return</string>
+   </property>
+  </action>
+  <action name="actionDeleteNode">
+   <property name="text">
+    <string>删除节点</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionReNew">
+   <property name="text">
+    <string>reNew</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionShowText">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>设置</string>
+   </property>
+  </action>
+  <action name="actionShowTree">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>树状图</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="shortcut">
+    <string>H</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>界面设置</string>
+   </property>
+  </action>
+  <action name="actionNewNode">
+   <property name="text">
+    <string>新建结点</string>
+   </property>
+   <property name="shortcut">
+    <string>N</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
- <resources>
-   <include location="mindnote.qrc"/>
- </resources>
+ <resources/>
  <connections/>
-</UI>
+</ui>
