@@ -1,12 +1,9 @@
 #include "mindnote.h"
 
 MindNote::MindNote(QWidget *parent)
-	: QMainWindow(parent),length(100),height(50), lineWidth(1),backWidth(1)
+	: QMainWindow(parent)
 {
-
-	//font = QFont();
 	ui.setupUi(this);
-
 	GraphicsHead = scene.addText("");
 	LineHead = scene.addText("");
 
